@@ -1,0 +1,40 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+issueTrackerURL = "https://github.com/MrCraftTeamMC/TubeNekoPlugin/issues"
+license = "GPLv3"
+
+[[mods]]
+modId = "tubenekoplugin"
+version = "${version}"
+displayName = "TubeNekoPlugin"
+displayURL = "https://tcbuildmc.xyz"
+authors = "TCBuildTeamMC"
+credits = "Block_limr267, Mr_zmh5, SnowCuiteQwQ"
+description = '''
+A server-side Mod / Plugin provides some mess features for Minecraft Servers. Used by TubeCraft.
+'''
+logoFile = "icon.png"
+
+[[dependencies.tubenekoplugin]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[20,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tubenekoplugin]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tubenekoplugin]]
+modId = "architectury"
+mandatory = true
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "tubenekoplugin.mixins.json"

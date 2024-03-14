@@ -1,0 +1,13 @@
+subprojects {
+    apply plugin: "com.github.johnrengelman.shadow"
+
+    configurations {
+        implementation.extendsFrom shadow
+    }
+
+    shadowJar {
+        configurations = [project.configurations.shadow]
+
+        zip64 true
+    }
+}

@@ -1,0 +1,28 @@
+repositories {
+    maven {
+        url = "https://libraries.minecraft.net/"
+    }
+}
+
+dependencies {
+    shadow project(":plugin:common")
+
+    compileOnly "net.md-5:bungeecord-api:${rootProject.bungeecord_version}"
+}
+
+processResources {
+    inputs.property "version", version
+
+    filesMatching("plugin.yml") {
+        expand "version": version
+    }
+}
+
+publishing {
+    publications {
+        mavenSponge(MavenPublication) {
+            artifactId = rootProject.archives_base_name + "-" + project.name
+            from components.java
+        }
+    }
+}

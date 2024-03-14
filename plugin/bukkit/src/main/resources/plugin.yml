@@ -1,0 +1,13 @@
+main: xyz.tcbuildmc.tubenekoplugin.bukkit.TubeNekoPluginBukkit
+name: "TubeNekoPlugin"
+version: "${version}"
+description: "A server-side Mod / Plugin provides some mess features for Minecraft Servers. Used by TubeCraft."
+api-version: "1.16"
+load: POSTWORLD
+authors:
+  - "TCBuildTeamMC"
+  - "Block_limr267, Mr_zmh5, SnowCuiteQwQ"
+website: "https://tcbuildmc.xyz"
+prefix: "TubeNekoPlugin"
+#commands:
+#permissions:

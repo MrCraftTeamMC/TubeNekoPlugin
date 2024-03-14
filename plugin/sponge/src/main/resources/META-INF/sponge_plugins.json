@@ -1,0 +1,40 @@
+{
+  "loader": {
+    "name": "java_plain",
+    "version": "1.0"
+  },
+  "license": "GPLv3",
+  "global": {
+    "version": "8.0.0",
+    "links": {
+      "homepage": "https://tcbuildmc.xyz",
+      "source": "https://github.com/MrCraftTeamMC/TubeNekoPlugin",
+      "issues": "https://github.com/MrCraftTeamMC/TubeNekoPlugin/issues"
+    },
+    "contributors": [
+      {
+        "name": "TCBuildTeamMC",
+        "description": "Develop Team"
+      },
+      {
+        "name": "Block_limr267, Mr_zmh5, SnowCuiteQwQ",
+        "description": "Contributors"
+      }
+    ],
+    "dependencies": [
+      {
+        "id": "spongeapi",
+        "version": "8.0.0"
+      }
+    ]
+  },
+  "plugins": [
+    {
+      "id": "tubenekoplugin",
+      "name": "TubeNekoPlugin",
+      "version": "${version}",
+      "entrypoint": "xyz.tcbuildmc.tubenekoplugin.sponge.TubeNekoPluginSponge",
+      "description": "A server-side Mod / Plugin provides some mess features for Minecraft Servers. Used by TubeCraft."
+    }
+  ]
+}

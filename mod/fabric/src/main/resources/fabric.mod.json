@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "tubenekoplugin",
+  "version": "${version}",
+  "name": "TubeNekoPlugin",
+  "description": "A server-side Mod / Plugin provides some mess features for Minecraft Servers. Used by TubeCraft.",
+  "authors": [
+    "TubeCraftBuildTeamMC"
+  ],
+  "contributors": [
+    "Block_limr267",
+    "Mr_zmh5",
+    "SnowCutieQwQ"
+  ],
+  "contact": {
+    "homepage": "https://tcbuildmc.xyz",
+    "sources": "https://github.com/MrCraftTeamMC/TubeNekoPlugin",
+    "issues": "https://github.com/MrCraftTeamMC/TubeNekoPlugin/issues"
+  },
+  "license": "GPLv3",
+  "icon": "icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "xyz.tcbuildmc.tubenekoplugin.fabric.TubeNekoPluginModFabric::onInitialize"
+    ],
+    "client": [
+      "xyz.tcbuildmc.tubenekoplugin.fabric.TubeNekoPluginModFabric::onInitializeClient"
+    ]
+  },
+  "accessWidener": "tubenekoplugin.accesswidener",
+  "mixins": [
+    "tubenekoplugin.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "fabricloader": ">=0.15",
+    "minecraft": ">=1.16",
+    "architectury": "*"
+  }
+}
