@@ -1,0 +1,3 @@
+command:
+  jrrp:
+    message: "%s今日人品：%d"

@@ -1,13 +1,33 @@
 main: xyz.tcbuildmc.tubenekoplugin.bukkit.TubeNekoPluginBukkit
-name: "TubeNekoPlugin"
+name: TubeNekoPlugin
 version: "${version}"
 description: "A server-side Mod / Plugin provides some mess features for Minecraft Servers. Used by TubeCraft."
-api-version: "1.16"
+api-version: 1.18
 load: POSTWORLD
 authors:
-  - "TCBuildTeamMC"
-  - "Block_limr267, Mr_zmh5, SnowCuiteQwQ"
-website: "https://tcbuildmc.xyz"
-prefix: "TubeNekoPlugin"
-#commands:
-#permissions:
+  - TCBuildTeamMC
+  - "Block_limr267, Mr_zmh5, SnowCutieOwO"
+website: https://tcbuildmc.xyz
+prefix: TubeNekoPlugin
+commands:
+  jrrp:
+    description: "Show your lucky number."
+    aliases:
+      - lucky
+    permission: tubenekoplugin.command.jrrp
+    permission-message: "You don't have permission to do this, please ask admins in your server."
+    usage: "Usage: /<jrrp|lucky>"
+permissions:
+  tubenekoplugins.command.jrrp:
+    description: "The permission to use /<jrrp|lucky>."
+    default: true
+  tubenokeplugins.command:
+    description: "The command permission node of TubeNekoPlugin."
+    default: op
+    children:
+      tubenokeplugins.command.jrrp: true
+  tubenekoplugin.*:
+    description: "The base permission of TubeNekoPlugin."
+    default: op
+    children:
+      tubenokeplugins.command: true

@@ -4,6 +4,7 @@ import dev.architectury.event.events.client.ClientCommandRegistrationEvent;
 import dev.architectury.event.events.common.CommandRegistrationEvent;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import xyz.tcbuildmc.tubenekoplugin.client.command.LuckyCommand;
 
 public class TubeNekoPluginMod {
     public static final String MOD_ID = "tubenekoplugin";
@@ -17,7 +18,7 @@ public class TubeNekoPluginMod {
     @Environment(EnvType.CLIENT)
     public static void initClient() {
         ClientCommandRegistrationEvent.EVENT.register((dispatcher, context) -> {
-
+            new LuckyCommand(dispatcher);
         });
     }
 }

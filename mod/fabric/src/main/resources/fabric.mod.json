@@ -10,7 +10,7 @@
   "contributors": [
     "Block_limr267",
     "Mr_zmh5",
-    "SnowCutieQwQ"
+    "SnowCutieOwO"
   ],
   "contact": {
     "homepage": "https://tcbuildmc.xyz",
@@ -35,7 +35,7 @@
   "depends": {
     "fabric": "*",
     "fabricloader": ">=0.15",
-    "minecraft": ">=1.16",
+    "minecraft": ">=1.18",
     "architectury": "*"
   }
 }
