@@ -1,2 +1,4 @@
-package xyz.tcbuildmc.tubenekoplugin.command;public class TubeNekoCommands {
+package xyz.tcbuildmc.tubenekoplugin.command;
+
+public final class TubeNekoCommands {
 }
