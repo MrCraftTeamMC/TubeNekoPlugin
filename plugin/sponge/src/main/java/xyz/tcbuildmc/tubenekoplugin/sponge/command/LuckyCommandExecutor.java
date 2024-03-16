@@ -9,7 +9,7 @@ import org.spongepowered.api.command.parameter.CommandContext;
 
 import java.util.Random;
 
-public class LuckyCommandExecutor implements CommandExecutor {
+public final class LuckyCommandExecutor implements CommandExecutor {
     @Override
     public CommandResult execute(CommandContext context) throws CommandException {
         context.sendMessage(Identity.nil(), Component.text("Your lucky number: " +

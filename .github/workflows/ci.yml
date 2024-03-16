@@ -13,7 +13,6 @@ jobs:
       contents: write
       discussions: write
 
-    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -46,6 +45,7 @@ jobs:
           properties: "release_version"
 
       - name: Upload Artifacts
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: TubeNekoPlugin-${{ env.SHORT_SHA }}
