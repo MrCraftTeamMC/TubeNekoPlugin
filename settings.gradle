@@ -13,7 +13,7 @@ pluginManagement {
 
 def projects = [
         "mod" : [":common", ":fabric", ":forge", ":neoforge"],
-        "plugin": [":common", ":bukkit", ":sponge", ":bungeecord", ":velocity"]
+        "plugin": [":common", ":bukkit", ":bungeecord", ":velocity"]
 ]
 
 projects.forEach { id, projs ->
