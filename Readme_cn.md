@@ -9,6 +9,16 @@
 ## Introduction
 A Bukkit Plugin provides some mess features for Minecraft Servers. Used by TubeCraft.
 
+| Loader type     | Minecraft version | Support release | Dependencies                       | Status |
+|-----------------|-------------------|-----------------|------------------------------------|--------|
+| Fabric / Quilt  | 1.16+             | 1.0.0-02+       | Architectury Api, Fabric Api / QSL | ✅      |
+| Forge           | 1.16+             | 1.0.0-02+       | Architectury Api                   | ✅      |
+| NeoForge        | 1.20.2+           | 1.0.0-02+       | Architectury Api                   | ✅      |
+| Bukkit (Spigot) | 1.8+              | 1.0.0-01+       | -                                  | ✅      |
+| Sponge          | 1.12+             | 1.0.0-02 Only   | -                                  | ❌      |
+| BungeeCord      | -                 | 1.0.0-02+       | -                                  | 🛠️    |
+| Velocity        | -                 | 1.0.0-02+       | -                                  | 🛠️    |
+
 For more details, please see the wiki page.
 
 ## Download

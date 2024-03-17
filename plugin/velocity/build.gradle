@@ -9,3 +9,12 @@ dependencies {
 
     annotationProcessor(implementation("com.velocitypowered:velocity-api:${rootProject.velocity_version}"))
 }
+
+publishing {
+    publications {
+        mavenVelocity(MavenPublication) {
+            artifactId = rootProject.archives_base_name + "-" + project.name
+            from components.java
+        }
+    }
+}

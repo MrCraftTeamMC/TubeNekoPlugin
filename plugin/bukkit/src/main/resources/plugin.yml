@@ -21,13 +21,22 @@ permissions:
   tubenekoplugins.command.jrrp:
     description: "The permission to use /<jrrp|lucky>."
     default: true
-  tubenokeplugins.command:
+  tubenokeplugins.command.*:
     description: "The command permission node of TubeNekoPlugin."
     default: op
     children:
       tubenokeplugins.command.jrrp: true
+  tubenokeplugins.bypass.enhanceddeath:
+    description: "The bypass permission of EnhancedDeath feature in TubeNekoPlugin."
+    default: op
+  tubenekoplugin.bypass.*:
+    description: "The bypass permission node of TubeNekoPlugin."
+    default: op
+    children:
+      tubenokeplugins.bypass.enhanceddeath: true
   tubenekoplugin.*:
     description: "The base permission of TubeNekoPlugin."
     default: op
     children:
-      tubenokeplugins.command: true
+      tubenokeplugins.command.*: true
+      tubenekoplugin.bypass.*: true

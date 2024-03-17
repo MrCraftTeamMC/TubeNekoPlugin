@@ -1,3 +1,10 @@
 command:
   jrrp:
     message: "%s今日人品：%d"
+
+feature:
+  enhancedDeath:
+    deathMessage: "%s你在 %s[%d, %d, %d] %s@ %s"
+    toggle: true
+    time: 5
+    respawnWaitMessage: "%s你将在%d秒后重生..."
