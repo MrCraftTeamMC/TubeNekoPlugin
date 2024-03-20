@@ -10,6 +10,16 @@ authors:
 website: https://tcbuildmc.xyz
 prefix: TubeNekoPlugin
 commands:
+  here:
+    description: "Show other players your location."
+    permission: tubenekoplugin.command.here
+    permission-message: "You don't have permission to do this, please ask admins in your server."
+    usage: "Usage: /here [glowing]"
+  where:
+    description: "Show you another player location."
+    permission: tubenekoplugin.command.where
+    permission-message: "You don't have permission to do this, please ask admins in your server."
+    usage: "Usage: /where <playerName> [glowing]"
   jrrp:
     description: "Show your lucky number."
     aliases:
@@ -21,11 +31,19 @@ permissions:
   tubenekoplugins.command.jrrp:
     description: "The permission to use /<jrrp|lucky>."
     default: true
+  tubenekoplugins.command.here:
+    description: "The permission to use /here."
+    default: true
+  tubenekoplugins.command.where:
+    description: "The permission to use /where."
+    default: op
   tubenokeplugins.command.*:
     description: "The command permission node of TubeNekoPlugin."
     default: op
     children:
       tubenokeplugins.command.jrrp: true
+      tubenekoplugins.command.here: true
+      tubenekoplugins.command.where: true
   tubenokeplugins.bypass.enhanceddeath:
     description: "The bypass permission of EnhancedDeath feature in TubeNekoPlugin."
     default: op

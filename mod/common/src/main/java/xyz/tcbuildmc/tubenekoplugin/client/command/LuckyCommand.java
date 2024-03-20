@@ -1,5 +1,6 @@
 package xyz.tcbuildmc.tubenekoplugin.client.command;
 
+import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.tree.LiteralCommandNode;
@@ -28,7 +29,7 @@ public final class LuckyCommand {
                 "commands.jrrp.message", new Random().nextInt(100))
                 .withStyle(ChatFormatting.AQUA));
 
-        return 0;
+        return Command.SINGLE_SUCCESS;
     }
 
     public LiteralCommandNode<ClientCommandRegistrationEvent.ClientCommandSourceStack> getJrrpNode() {
