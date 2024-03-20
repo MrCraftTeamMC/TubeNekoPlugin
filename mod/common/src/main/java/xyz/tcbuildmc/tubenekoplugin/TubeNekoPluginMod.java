@@ -8,14 +8,19 @@ import net.fabricmc.api.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.tcbuildmc.tubenekoplugin.client.command.LuckyCommand;
+import xyz.tcbuildmc.tubenekoplugin.command.HereCommand;
+import xyz.tcbuildmc.tubenekoplugin.command.WhereCommand;
 import xyz.tcbuildmc.tubenekoplugin.event.PlayerRespawnEventListener;
 
+// TODO Add Config file
 public class TubeNekoPluginMod {
     public static final String MOD_ID = "tubenekoplugin";
     public static final Logger LOGGER = LoggerFactory.getLogger("TubeNekoPlugin");
     
     public static void init() {
         CommandRegistrationEvent.EVENT.register((dispatcher, registry, selection) -> {
+            new HereCommand(dispatcher);
+            new WhereCommand(dispatcher);
         });
 
         // instead of PlayerEvent.PLAYER_RESPAWN

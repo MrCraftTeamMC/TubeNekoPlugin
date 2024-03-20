@@ -5,8 +5,6 @@ repositories {
 }
 
 dependencies {
-    shadow project(":plugin:common")
-
     compileOnly "net.md-5:bungeecord-api:${rootProject.bungeecord_version}"
 }
 

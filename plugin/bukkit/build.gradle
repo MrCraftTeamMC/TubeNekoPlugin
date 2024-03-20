@@ -10,8 +10,6 @@ repositories {
 }
 
 dependencies {
-    shadow project(":plugin:common")
-
     compileOnly "org.spigotmc:spigot-api:${rootProject.spigot_version}"
 }
 

@@ -5,8 +5,6 @@ repositories {
 }
 
 dependencies {
-    shadow project(":plugin:common")
-
     annotationProcessor(implementation("com.velocitypowered:velocity-api:${rootProject.velocity_version}"))
 }
 

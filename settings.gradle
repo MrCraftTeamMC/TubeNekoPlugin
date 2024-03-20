@@ -8,12 +8,14 @@ pluginManagement {
         maven { url "https://maven.quiltmc.org/repository/release/" }
         maven { url "https://jitpack.io/" }
         gradlePluginPortal()
+        mavenLocal()
+        mavenCentral()
     }
 }
 
 def projects = [
         "mod" : [":common", ":fabric", ":forge", ":neoforge"],
-        "plugin": [":common", ":bukkit", ":bungeecord", ":velocity"]
+        "plugin": [":bukkit", ":bungeecord", ":velocity"]
 ]
 
 projects.forEach { id, projs ->
