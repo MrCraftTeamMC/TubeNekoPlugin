@@ -9,6 +9,8 @@ authors:
   - "Block_limr267, Mr_zmh5, SnowCutieOwO"
 website: https://tcbuildmc.xyz
 prefix: TubeNekoPlugin
+softdepend:
+  - PlaceholderAPI
 commands:
   here:
     description: "Show other players your location."

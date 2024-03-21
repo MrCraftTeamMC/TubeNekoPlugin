@@ -2,6 +2,8 @@ help: "%s你在干什么，还是建议你查一下 wiki 吧: https://github.com
 reload: "%sTubeNekoPlugin 重载中..."
 notPlayer: "%s你是玩家吗¿"
 invalidPlayer: "%s没有这个玩家..."
+noPapi: "你没有安装 PlaceholderAPI 插件! 部分功能将无法使用。"
+bstats: true
 
 command:
   cooldown: 1
