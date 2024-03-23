@@ -1,5 +1,6 @@
 package xyz.tcbuildmc.tubenekoplugin.bukkit.command;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -21,7 +22,7 @@ public final class WhereCommandExecutor implements TabExecutor {
         if (this.plugin.getConfig().getBoolean("command.where.toggle", false)) {
             if (args.length == 1 || args.length == 2) {
                 if (sender instanceof Player player) {
-                    Player target = player.getServer().getPlayer(args[0]);
+                    Player target = Bukkit.getPlayer(args[0]);
 
                     if (target != null) {
                         Location location = target.getLocation();
