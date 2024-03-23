@@ -13,7 +13,7 @@ import xyz.tcbuildmc.tubenekoplugin.command.WhereCommand;
 import xyz.tcbuildmc.tubenekoplugin.event.PlayerRespawnEventListener;
 
 // TODO Add Config file
-public class TubeNekoPluginMod {
+public final class TubeNekoPluginMod {
     public static final String MOD_ID = "tubenekoplugin";
     public static final Logger LOGGER = LoggerFactory.getLogger("TubeNekoPlugin");
     

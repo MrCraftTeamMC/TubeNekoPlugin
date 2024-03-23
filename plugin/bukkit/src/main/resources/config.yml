@@ -3,10 +3,8 @@ reload: "%sTubeNekoPlugin 重载中..."
 notPlayer: "%s你是玩家吗¿"
 invalidPlayer: "%s没有这个玩家..."
 noPapi: "你没有安装 PlaceholderAPI 插件! 部分功能将无法使用。"
-bstats: true
 
 command:
-  cooldown: 1
   jrrp:
     toggle: true
     message: "%s今日人品：%d"
@@ -18,6 +16,10 @@ command:
     message: "%s玩家 %s 在 %s[%d, %d, %d] %s@ %s"
 
 feature:
+  commandCoolDown:
+    toggle: true
+    time: 1
+    message: "%s命令冷却还没到呢!"
   enhancedDeath:
     toggle: true
     deathMessage: "%s你在 %s[%d, %d, %d] %s@ %s 死了"

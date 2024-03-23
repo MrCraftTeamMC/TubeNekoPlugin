@@ -16,7 +16,7 @@ import org.slf4j.Logger;
         "Mr_limr267, Mr_zmh5, SnowCuiteQwQ"
     }
 )
-public class TubeNekoPluginVelocity {
+public final class TubeNekoPluginVelocity {
     @Inject
     private Logger logger;
 

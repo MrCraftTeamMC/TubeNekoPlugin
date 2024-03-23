@@ -15,7 +15,7 @@ import xyz.tcbuildmc.tubenekoplugin.bukkit.stats.Metrics;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-public class TubeNekoPluginBukkit extends JavaPlugin {
+public final class TubeNekoPluginBukkit extends JavaPlugin {
     private final Logger logger = this.getLogger();
     private final int bstats_plugin_id = 21386;
 
@@ -33,9 +33,7 @@ public class TubeNekoPluginBukkit extends JavaPlugin {
         }
 
         // BStats
-        if (this.getConfig().getBoolean("bstats", false)) {
-            new Metrics(this, bstats_plugin_id);
-        }
+        new Metrics(this, bstats_plugin_id);
 
         Bukkit.getPluginManager().registerEvents(new PlayerRespawnEventListener(), this);
         Objects.requireNonNull(Bukkit.getPluginCommand("tubenekoplugin")).setExecutor(new MainCommand());
