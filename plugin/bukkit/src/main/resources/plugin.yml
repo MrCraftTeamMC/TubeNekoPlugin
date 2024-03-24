@@ -12,6 +12,11 @@ prefix: TubeNekoPlugin
 softdepend:
   - PlaceholderAPI
 commands:
+  tubenekoplugin:
+    description: "The main command of TubeNekoPlugin."
+    permission: tubenekoplugin.command.main
+    permission-message: "You don't have permission to do this, please ask admins in your server."
+    usage: "Usage: /tubenekoplugin [help|reload]"
   here:
     description: "Show other players your location."
     permission: tubenekoplugin.command.here
@@ -30,6 +35,9 @@ commands:
     permission-message: "You don't have permission to do this, please ask admins in your server."
     usage: "Usage: /<jrrp|lucky>"
 permissions:
+  tubenekoplugin.command.main:
+    description: "The permission to use /tubenekoplugin."
+    default: op
   tubenekoplugins.command.jrrp:
     description: "The permission to use /<jrrp|lucky>."
     default: true
@@ -43,6 +51,7 @@ permissions:
     description: "The command permission node of TubeNekoPlugin."
     default: op
     children:
+      tubenekoplugin.command.main: true
       tubenokeplugins.command.jrrp: true
       tubenekoplugins.command.here: true
       tubenekoplugins.command.where: true
