@@ -9,7 +9,14 @@ authors:
   - "Block_limr267, Mr_zmh5, SnowCutieOwO"
 website: https://tcbuildmc.xyz
 prefix: TubeNekoPlugin
+softdepend:
+  - PlaceholderAPI
 commands:
+  tubenekoplugin:
+    description: "The main command of TubeNekoPlugin."
+    permission: tubenekoplugin.command.main
+    permission-message: "You don't have permission to do this, please ask admins in your server."
+    usage: "Usage: /tubenekoplugin [help|reload]"
   here:
     description: "Show other players your location."
     permission: tubenekoplugin.command.here
@@ -28,6 +35,9 @@ commands:
     permission-message: "You don't have permission to do this, please ask admins in your server."
     usage: "Usage: /<jrrp|lucky>"
 permissions:
+  tubenekoplugin.command.main:
+    description: "The permission to use /tubenekoplugin."
+    default: op
   tubenekoplugins.command.jrrp:
     description: "The permission to use /<jrrp|lucky>."
     default: true
@@ -41,17 +51,22 @@ permissions:
     description: "The command permission node of TubeNekoPlugin."
     default: op
     children:
+      tubenekoplugin.command.main: true
       tubenokeplugins.command.jrrp: true
       tubenekoplugins.command.here: true
       tubenekoplugins.command.where: true
-  tubenokeplugins.bypass.enhanceddeath:
+  tubenekoplugin.bypass.commandCoolDown:
+    description: "The bypass permission of the CommandCoolDown feature in TubeNekoPlugin."
+    default: op
+  tubenokeplugin.bypass.enhanceddeath:
     description: "The bypass permission of EnhancedDeath feature in TubeNekoPlugin."
     default: op
   tubenekoplugin.bypass.*:
     description: "The bypass permission node of TubeNekoPlugin."
     default: op
     children:
-      tubenokeplugins.bypass.enhanceddeath: true
+      tubenokeplugin.bypass.enhanceddeath: true
+      tubenekoplugin.bypass.commandCoolDown: true
   tubenekoplugin.*:
     description: "The base permission of TubeNekoPlugin."
     default: op

@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:${rootProject.spigot_version}"
+
+    compileOnly "me.clip:placeholderapi:${rootProject.papi_version}"
 }
 
 processResources {

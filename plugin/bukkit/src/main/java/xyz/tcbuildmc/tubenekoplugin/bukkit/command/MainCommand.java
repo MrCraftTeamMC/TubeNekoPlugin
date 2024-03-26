@@ -40,7 +40,7 @@ public class MainCommand implements TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String alias, String[] args) {
         if (args.length == 1) {
-            return List.of("<help|reload>");
+            return List.of("[help|reload]");
         }
 
         return List.of();
